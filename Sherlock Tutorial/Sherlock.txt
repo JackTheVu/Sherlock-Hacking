@@ -1,0 +1,282 @@
+[-- --- --- --- --- --- --- --- --- --- --- WARNING --- --- --- --- --- --- --- --- --- --- --] 
+[                                                                                             ]
+[before doing thi tutorial download the github repository of sherlock with the command:       ]
+[                                                                                             ]
+[  ┌──(Vurro㉿kali)-[~]                                                                       ]
+[  └─$ cd Desktop                                                                             ]
+[                                                                                             ]
+[                                                                                             ]
+[  ┌──(Vurro㉿kali)-[~]                                                                       ]
+[  └─$ git clone https://github.com/sherlock-project/sherlock.git                             ]
+[                                                                                             ]
+[                                                                                             ]
+[  ┌──(Vurro㉿kali)-[~/Desktop/sherlock]                                                      ]
+[  └─$ python3 -m pip install -r requirements.txt                                             ]
+[                                                                                             ]
+[                                                                                             ]
+[-- --- --- --- --- --- --- --- --- --- --- WARNING --- --- --- --- --- --- --- --- --- --- --] 
+
+
+
+1).  Go in desktop folder
+
+┌──(Vurro㉿kali)-[~]
+└─$ cd Desktop
+
+2).  Go in the sherlock folder
+
+┌──(Vurro㉿kali)-[~/Desktop]
+└─$ cd sherlock
+
+3).  Go in the folder of the script
+
+┌──(Vurro㉿kali)-[~/Desktop/sherlock]
+└─$ cd sherlock
+
+4).  Run the python script with help
+
+┌──(Vurro㉿kali)-[~/Desktop/sherlock/sherlock]
+└─$ python3 sherlock.py --help
+
+5).  Now you can see all the sherlock commands and usage
+
+┌──(Vurro㉿kali)-[~/Desktop/sherlock/sherlock]
+└─$ python3 sherlock.py --help
+usage: sherlock.py [-h] [--version] [--verbose] [--folderoutput FOLDEROUTPUT] [--output OUTPUT]
+                   [--tor] [--unique-tor] [--csv] [--site SITE_NAME] [--proxy PROXY_URL]
+                   [--json JSON_FILE] [--timeout TIMEOUT] [--print-all] [--print-found] [--no-color]
+                   [--browse] [--local]
+                   USERNAMES [USERNAMES ...]
+
+Sherlock: Find Usernames Across Social Networks (Version 0.14.0)
+
+positional arguments:
+  USERNAMES             One or more usernames to check with social networks.
+                                                                                                      
+optional arguments:                                                                                   
+  -h, --help            show this help message and exit
+  --version             Display version information and dependencies.
+  --verbose, -v, -d, --debug
+                        Display extra debugging information and metrics.
+  --folderoutput FOLDEROUTPUT, -fo FOLDEROUTPUT
+                        If using multiple usernames, the output of the results will be saved to this
+                        folder.
+  --output OUTPUT, -o OUTPUT
+                        If using single username, the output of the result will be saved to this
+                        file.
+  --tor, -t             Make requests over Tor; increases runtime; requires Tor to be installed and
+                        in system path.
+  --unique-tor, -u      Make requests over Tor with new Tor circuit after each request; increases
+                        runtime; requires Tor to be installed and in system path.
+  --csv                 Create Comma-Separated Values (CSV) File.
+  --site SITE_NAME      Limit analysis to just the listed sites. Add multiple options to specify
+                        more than one site.
+  --proxy PROXY_URL, -p PROXY_URL
+                        Make requests over a proxy. e.g. socks5://127.0.0.1:1080
+  --json JSON_FILE, -j JSON_FILE
+                        Load data from a JSON file or an online, valid, JSON file.
+  --timeout TIMEOUT     Time (in seconds) to wait for response to requests. Default timeout is
+                        infinity. A longer timeout will be more likely to get results from slow
+                        sites. On the other hand, this may cause a long delay to gather all results.
+  --print-all           Output sites where the username was not found.
+  --print-found         Output sites where the username was found.
+  --no-color            Don't color terminal output
+  --browse, -b          Browse to all results on default browser.
+  --local, -l           Force the use of the local data.json file.
+
+6).  Run sherlock for find anyone
+
+┌──(Vurro㉿kali)-[~/Desktop/sherlock/sherlock]
+└─$ python3 sherlock.py "the name of the victim"
+
+7).  Now the output results like this
+
+┌──(Vurro㉿kali)-[~/Desktop/sherlock/sherlock]
+└─$ python3 sherlock.py victim
+[*] Checking username victim on:
+[+] 7Cups: https://www.7cups.com/@victim
+[+] 9GAG: https://www.9gag.com/u/victim
+[+] About.me: https://about.me/victim
+[+] Academia.edu: https://independent.academia.edu/victim
+[+] AllTrails: https://www.alltrails.com/members/victim
+[+] Apple Discussions: https://discussions.apple.com/profile/victim
+[+] Archive.org: https://archive.org/details/@victim
+[+] AskFM: https://ask.fm/victim
+[+] Audiojungle: https://audiojungle.net/user/victim
+[+] BLIP.fm: https://blip.fm/victim
+[+] BOOTH: https://victim.booth.pm/
+[+] Bandcamp: https://www.bandcamp.com/victim
+[+] Behance: https://www.behance.net/victim
+[+] BitBucket: https://bitbucket.org/victim/
+[+] Blogger: https://victim.blogspot.com
+[+] BuzzFeed: https://buzzfeed.com/victim
+[+] CNET: https://www.cnet.com/profiles/victim/
+[+] Carbonmade: https://victim.carbonmade.com
+[+] Career.habr: https://career.habr.com/victim
+[+] Cent: https://beta.cent.co/@victim
+[+] Championat: https://www.championat.com/user/victim
+[+] Chess: https://www.chess.com/member/victim
+[+] Cloob: https://www.cloob.com/name/victim
+[+] Codecademy: https://www.codecademy.com/profiles/victim
+[+] Codechef: https://www.codechef.com/users/victim
+[+] Countable: https://www.countable.us/victim
+[+] Cracked: https://www.cracked.com/members/victim/
+[+] DEV Community: https://dev.to/victim
+[+] DailyMotion: https://www.dailymotion.com/victim
+[+] DeviantART: https://victim.deviantart.com
+[+] Discogs: https://www.discogs.com/user/victim
+[+] Disqus: https://disqus.com/victim
+[+] Docker Hub: https://hub.docker.com/u/victim/
+[+] Dribbble: https://dribbble.com/victim
+[+] Duolingo: https://www.duolingo.com/profile/victim
+[+] Ello: https://ello.co/victim
+[+] Euw: https://euw.op.gg/summoner/userName=victim
+[+] F3.cool: https://f3.cool/victim/
+[+] Facebook: https://www.facebook.com/victim
+[+] Facenama: https://facenama.com/victim
+[+] Flickr: https://www.flickr.com/people/victim
+[+] Flipboard: https://flipboard.com/@victim
+[+] FortniteTracker: https://fortnitetracker.com/profile/all/victim
+[+] Freelancer.com: https://www.freelancer.com/api/users/0.1/users?usernames%5B%5D=victim&compact=true
+[+] Freesound: https://freesound.org/people/victim/
+[+] GDProfiles: https://gdprofiles.com/victim
+[+] Giphy: https://giphy.com/victim
+[+] GitHub: https://www.github.com/victim
+[+] GitLab: https://gitlab.com/victim
+[+] Gitee: https://gitee.com/victim
+[+] GoodReads: https://www.goodreads.com/victim
+[+] Gravatar: http://en.gravatar.com/victim
+[+] Gumroad: https://www.gumroad.com/victim
+[+] HackerNews: https://news.ycombinator.com/user?id=victim
+[+] HackerOne: https://hackerone.com/victim
+[+] HackerRank: https://hackerrank.com/victim
+[+] House-Mixes.com: https://www.house-mixes.com/profile/victim
+[+] Houzz: https://houzz.com/user/victim
+[+] HubPages: https://hubpages.com/@victim
+[+] ICQ: https://icq.im/victim
+[+] IFTTT: https://www.ifttt.com/p/victim
+[+] Imgur: https://imgur.com/user/victim
+[+] Instructables: https://www.instructables.com/member/victim
+[+] Issuu: https://issuu.com/victim
+[+] Itch.io: https://victim.itch.io/
+[+] Kaggle: https://www.kaggle.com/victim
+[+] Kali community: https://forums.kali.org/member.php?username=victim
+[+] Keybase: https://keybase.io/victim
+[+] Kik: https://kik.me/victim
+[+] Kongregate: https://www.kongregate.com/accounts/victim
+[+] LOR: https://www.linux.org.ru/people/victim/profile
+[+] LeetCode: https://leetcode.com/victim
+[+] Letterboxd: https://letterboxd.com/victim
+[+] Lichess: https://lichess.org/@/victim
+[+] LiveJournal: https://victim.livejournal.com
+[+] LiveLeak: https://www.liveleak.com/c/victim
+[+] Lolchess: https://lolchess.gg/profile/na/victim
+[+] Medium: https://medium.com/@victim
+[+] Memrise: https://www.memrise.com/user/victim/
+[+] MixCloud: https://www.mixcloud.com/victim/
+[+] MyAnimeList: https://myanimelist.net/profile/victim
+[+] Myspace: https://myspace.com/victim
+[+] NameMC (Minecraft.net skins): https://namemc.com/profile/victim
+[+] Naver: https://blog.naver.com/victim
+[+] Newgrounds: https://victim.newgrounds.com
+[+] Otzovik: https://otzovik.com/profile/victim
+[+] PCPartPicker: https://pcpartpicker.com/user/victim
+[+] Pastebin: https://pastebin.com/u/victim
+[+] Patreon: https://www.patreon.com/victim
+[+] Periscope: https://www.periscope.tv/victim/
+[+] Pinkbike: https://www.pinkbike.com/u/victim/
+[+] Pinterest: https://www.pinterest.com/victim/
+[+] Pokemon Showdown: https://pokemonshowdown.com/users/victim
+[+] ProductHunt: https://www.producthunt.com/@victim
+[+] PromoDJ: http://promodj.com/victim
+[+] Quizlet: https://quizlet.com/victim
+[+] Quora: https://www.quora.com/profile/victim
+[+] Rajce.net: https://victim.rajce.idnes.cz/
+[+] Rate Your Music: https://rateyourmusic.com/~victim
+[+] Redbubble: https://www.redbubble.com/people/victim
+[+] Reddit: https://www.reddit.com/user/victim
+[+] Repl.it: https://repl.it/@victim
+[+] ReverbNation: https://www.reverbnation.com/victim
+[+] Roblox: https://www.roblox.com/user.aspx?username=victim
+[+] RubyGems: https://rubygems.org/profiles/victim
+[+] Scratch: https://scratch.mit.edu/users/victim
+[+] Scribd: https://www.scribd.com/victim
+[+] Slack: https://victim.slack.com
+[+] Slashdot: https://slashdot.org/~victim
+[+] SlideShare: https://slideshare.net/victim
+[+] Smule: https://www.smule.com/victim
+[+] SoundCloud: https://soundcloud.com/victim
+[+] SourceForge: https://sourceforge.net/u/victim
+[+] Speedrun.com: https://speedrun.com/user/victim
+[+] SportsRU: https://www.sports.ru/profile/victim/
+[+] Spotify: https://open.spotify.com/user/victim
+[+] Star Citizen: https://robertsspaceindustries.com/citizens/victim
+[+] Steam: https://steamcommunity.com/id/victim
+[+] SteamGroup: https://steamcommunity.com/groups/victim
+[+] Steamid: https://steamid.uk/profile/victim
+[+] TETR.IO: https://ch.tetr.io/u/victim
+[+] Telegram: https://t.me/victim
+[+] Tellonym.me: https://tellonym.me/victim
+[+] TikTok: https://tiktok.com/@victim
+[+] TrackmaniaLadder: http://en.tm-ladder.com/victim_rech.php
+[+] TradingView: https://www.tradingview.com/u/victim/
+[+] Trakt: https://www.trakt.tv/users/victim
+[+] Trello: https://trello.com/victim
+[+] TripAdvisor: https://tripadvisor.com/members/victim
+[+] Twitch: https://www.twitch.tv/victim
+[+] Twitter: https://mobile.twitter.com/victim
+[+] Typeracer: https://data.typeracer.com/pit/profile?user=victim
+[+] Ultimate-Guitar: https://ultimate-guitar.com/u/victim
+[+] Unsplash: https://unsplash.com/@victim
+[+] VK: https://vk.com/victim
+[+] VSCO: https://vsco.co/victim
+[+] Vimeo: https://vimeo.com/victim
+[+] VirusTotal: https://www.virustotal.com/ui/users/victim/trusted_users
+[+] Warrior Forum: https://www.warriorforum.com/members/victim.html
+[+] Wattpad: https://www.wattpad.com/user/victim
+[+] We Heart It: https://weheartit.com/victim
+[+] Wikidot: http://www.wikidot.com/user:info/victim
+[+] WordPress: https://victim.wordpress.com/
+[+] WordPressOrg: https://profiles.wordpress.org/victim/
+[+] Xbox Gamertag: https://xboxgamertag.com/search/victim
+[+] YouNow: https://www.younow.com/victim/
+[+] YouTube: https://www.youtube.com/victim
+[+] Zhihu: https://www.zhihu.com/people/victim
+[+] akniga: https://akniga.org/profile/victim
+[+] authorSTREAM: http://www.authorstream.com/victim/
+[+] couchsurfing: https://www.couchsurfing.com/people/victim
+[+] d3RU: https://d3.ru/user/victim/posts
+[+] datingRU: http://dating.ru/victim
+[+] drive2: https://www.drive2.ru/users/victim
+[+] fixya: https://www.fixya.com/users/victim
+[+] fl: https://www.fl.ru/users/victim
+[+] forumhouseRU: https://www.forumhouse.ru/members/?username=victim
+[+] geocaching: https://www.geocaching.com/p/default.aspx?u=victim
+[+] gfycat: https://gfycat.com/@victim
+[+] habr: https://habr.com/ru/users/victim
+[+] hackster: https://www.hackster.io/victim
+[+] iMGSRC.RU: https://imgsrc.ru/main/user.php?user=victim
+[+] igromania: http://forum.igromania.ru/member.php?username=victim
+[+] interpals: https://www.interpals.net/victim
+[+] jeuxvideo: http://www.jeuxvideo.com/profil/victim?mode=infos
+[+] kwork: https://kwork.ru/user/victim
+[+] labpentestit: https://lab.pentestit.ru/profile/victim
+[+] last.fm: https://last.fm/user/victim
+[+] moikrug: https://moikrug.ru/victim
+[+] nairaland.com: https://www.nairaland.com/victim
+[+] note: https://note.com/victim
+[+] npm: https://www.npmjs.com/~victim
+[+] opennet: https://www.opennet.ru/~victim
+[+] osu!: https://osu.ppy.sh/users/victim
+[+] pikabu: https://pikabu.ru/@victim
+[+] radio_echo_msk: https://echo.msk.ru/users/victim
+[+] satsisRU: https://satsis.info/user/victim
+[+] toster: https://www.toster.ru/user/victim/answers
+
+
+8).  For a faster result set timeout to 1
+
+┌──(Vurro㉿kali)-[~/Desktop/sherlock/sherlock]
+└─$ python3 sherlock.py victim --timeout 1
+
+     
