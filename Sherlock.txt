@@ -273,8 +273,9 @@ optional arguments:
 [+] satsisRU: https://satsis.info/user/victim
 [+] toster: https://www.toster.ru/user/victim/answers
 
+--- --- --- --- TIP --- --- --- ---
 
-8).  For a faster result set timeout to 1
+For a faster result set timeout to 1
 
 ┌──(Vurro㉿kali)-[~/Desktop/sherlock/sherlock]
 └─$ python3 sherlock.py victim --timeout 1
